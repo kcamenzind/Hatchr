@@ -8,7 +8,6 @@ def get_file(filename):  # pragma: no cover
         src = os.path.join('html', filename)
         # Figure out how flask returns static files
         # Tried:
-        hi bitch
         # - render_template
         # - send_file
         # This should not be so non-obvious
@@ -23,3 +22,7 @@ def home_page():
 @app.route('/another_page')
 def next_page():
     return "WAssup dawg"
+
+@app.route('/login_page')
+def login_page():
+    return get_file('test_page.html')
